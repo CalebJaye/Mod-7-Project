@@ -38,9 +38,9 @@ This application will use the [name of API] API. Below are the documentation and
 
 The application will feature the following frontend routes and core features:
 
-* On the `/example` page, users can...
-* On the `/example` page, users can...
-* On the `/example` page, users can...
+* On the `/home` page, users can view world news and news about space 
+* On the `/home` page, users can click on a news article, taking them to the entire article.
+* On the `/home` page, users can...
 
 **Example:**
 - On the `/artworks` page, users can view a grid of all artwork
@@ -65,9 +65,9 @@ If time permits, the following stretch features will be implemented in order of 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [Create scrum board   Due 3/13 ] Ticket description and due date
+- [Create repo    Due 3/13 ] Ticket description and due date
+- [Proposal   Due 3/14] Ticket description and due date
 
 **Day 2**
 - [ ] Ticket description and due date
