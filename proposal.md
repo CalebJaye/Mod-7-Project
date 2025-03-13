@@ -1,10 +1,10 @@
-# [Project Name]
+# Here To The Stars
 
 Created by Caleb Johnson and Xavier Campos.
 
 ## 🚀 Mission statement
 
-Our application, [app name] is for [target audience]. It allows users to [what it does and why audience would use it]
+Our application, Here To The Stars is for people who want to know more about outer space and what's happening around us. It allows users to hear knews about what goes on in the cosmos as well as what the world around us is up to. It is made for the people who want to know as much about the world and galaxy as possible.
 
 ## API & React Router
 
