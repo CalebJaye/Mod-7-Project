@@ -1,6 +1,6 @@
 # Here To The Stars
 
-Created by Xavier and Caleb.
+Created by Caleb Johnson and Xavier Campos.
 
 ## 🚀 Mission statement
 
@@ -8,15 +8,24 @@ Our application, Here To The Stars is for people who want to know more about out
 
 ## API & React Router
 
-This application will use the [name of API] API. Below are the documentation and specific endpoints we intend to use and the front-end pages that will use them.
+This application will use the [Na] API. Below are the documentati on and specific endpoints we intend to use and the front-end pages that will use them.
 
-- Link to API documentation: [Link goes here]
+- Link to API documentation: [https://api.nasa.gov/index.html#main-content] - REQUIRES KEY ()
+
+
+- Link to API documentation: [https://worldnewsapi.com] - REQUIRES KEY (323ed60da6954f5181a32c3f8da158f2)
+
+
 - API endpoint #1
-  - Description of endpoint
-  - List of data values used by the endpoint
+  - [Description of endpoint](https://api.nasa.gov/planetary/apod)
+  - fetches image of stars and sky
+
+
 - API endpoint #2
-  - Description of endpoint
+  - [Description of endpoint](https://api.worldnewsapi.com/top-news)
   - List of data values used by the endpoint
+
+
 - API endpoint #3
   - Description of endpoint
   - List of data values used by the endpoint
