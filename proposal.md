@@ -8,7 +8,7 @@ Our application, Here To The Stars is for people who want to know more about out
 
 ## API & React Router
 
-This application will use the [Na] API. Below are the documentati on and specific endpoints we intend to use and the front-end pages that will use them.
+This application will use the NASA and World News API. Below are the documentati on and specific endpoints we intend to use and the front-end pages that will use them.
 
 - Link to API documentation: [https://api.nasa.gov/index.html#main-content] - REQUIRES KEY ()
 
@@ -25,31 +25,20 @@ This application will use the [Na] API. Below are the documentati on and specifi
   - [Description of endpoint](https://api.worldnewsapi.com/top-news)
   - List of data values used by the endpoint
 
-
-- API endpoint #3
-  - Description of endpoint
-  - List of data values used by the endpoint
+- API endpoint #3 
+- [Gets an individual news article based on what the user types in the search bar] [https://api.worldnewsapi.com/search-news]
 
 [If your API requires an API key, say so here.]
+Both APIs require an API Key
 
-**Example:**
-- https://api.artic.edu/api/v1/artworks
-  - This will fetch an array of artwork objects
-  - For each artwork, I want the `id`, `title`, and `image_id`
-- https://api.artic.edu/api/v1/artworks/{id}
-  - This will fetch a single artwork object
-  - I will use the `id`, `title`, `short_description`, `medium_display`, `place_of_origin` and `image_id`
-- https://api.artic.edu/api/v1/artworks/search?q={query}
-  - This will fetch a list of artworks that relate to the search query
-  - For each artwork, I will use the `id` and `title`
+
 
 ## 👩‍💻 MVP User Stories & Frontend Routes
 
 The application will feature the following frontend routes and core features:
 
-* On the `/home` page, users can view world news and news about space 
-* On the `/home` page, users can click on a news article, taking them to the entire article.
-* On the `/home` page, users can...
+* On the `Main` page, users can look at trending global news alongsidie some interesting facts about space
+* On the `/example` page, users can...
 
 **Example:**
 - On the `/artworks` page, users can view a grid of all artwork
@@ -61,47 +50,41 @@ The application will feature the following frontend routes and core features:
 
 If time permits, the following stretch features will be implemented in order of priority:
 
-* Users will be able to...
-* Users will be able to...
-* Users will be able to...
+* Users will be able to view more info about space (space weather)
+* Users will be able to view space advances news
 
-**Example:**
-* Users will be able to save and view favorited artworks using local storage
-* Users will be able to change the color scheme of the website from light mode to dark mode
 
 ## 📆 Timeline for reaching MVP in 1 week
 
 To ensure that we can complete all core features of the application in 1 week, we will aim to complete tasks according to the following timeline:
 
 **Day 1**
-- [Create scrum board   Due 3/13 ] Ticket description and due date
-- [Create repo    Due 3/13 ] Ticket description and due date
-- [Proposal   Due 3/14] Ticket description and due date
+- [Search for Space API Due 3/17]
+- [Search for News API    Due 3/17 ] 
+- [Select API's in NASA API we like the most    Due 3/17] 
 
 **Day 2**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [Create Wireframe Due 3/18]
 
 **Day 3** (MVP due by the end of the day)
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [Fetch data from NASA APIs] 
+- [Fetch Data from World News API ] 
+- [Create basic website page using React]
+
 
 **Day 4**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- Style website 3/19
+- [Re-render application when article is clicked ] 3/18
+
 
 **Day 5**
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [Implement trending new articles 3/20]
+- [Create search function for news articles] 3/21
+
 
 ## Wireframes of each page in your application
 
 Below, you can find wireframes for our project. Each wireframe shows a different page of our application as well as the key components of the application. Details such as specific text values or images are intentionally not included:
 
-[Wireframe for page 1]
+https://excalidraw.com/#room=9432b3b9fac7789c6235,VYEq_kvHsi7auss5tttEXA
 
-[Wireframe for page 2]
