@@ -1,7 +1,7 @@
 import './App.css'
 import React, {useEffect, useState} from "react"
 import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import fetchData from '../adapters/FetchData.js'
+
 
 
 
