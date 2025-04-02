@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 const NEWS_API_URL = "https://saurav.tech/NewsAPI/top-headlines/category/general/us.json";
@@ -10,7 +10,7 @@ const Home = ({ articles }) => {
       <h1 className="app-title">Here to the Stars 🌎🚀</h1>
       <div className="news-grid">
         {articles.map((article) => (
-          <Link to={article.url} target="_blank" className="news-card-link">
+          <Link key={article.url} to={article.url} target="_blank" className="news-card-link">
             <div className="news-card">
               <img src={article.urlToImage} alt={article.title} className="news-image" />
               <div className="news-card-content">
@@ -34,13 +34,11 @@ const App = () => {
       .then((data) => setArticles(data.articles))
       .catch((err) => console.error("Error fetching news:", err));
   }, []);
-  
-  return(
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home articles={articles} />} />
-      </Routes>
-    </Router>
+
+  return (
+    <Routes>
+      <Route path="/" element={<Home articles={articles} />} />
+    </Routes>
   );
 };
 
