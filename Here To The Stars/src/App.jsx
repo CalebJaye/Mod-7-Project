@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import React, {useEffect, useState} from "react"
+import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import fetchData from '../adapters/FetchData.js'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+ const SPACE_API = 'https://api.spaceflightnewsapi.net/v4/articles/'
+
+ const SpaceHome = ({ articles }) => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <h1 className="title">Here To The Stars</h1>
+      <div className="grid">
+        {articles.map((article) => (
+          <Link to={article.url} target="_blank" className="news-card-link">
+            <div className="news-card">
+              <img src={article.image_url} alt={article.title} className="news-image" />
+              <div className="news-card-content">
+                <h3>{article.title}</h3>
+                <p>{article.summary}</p>
+              </div>
+            </div>
+          </Link>
+        ))} 
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
-}
+ };
 
+function App() { 
+  const [articles, setArticles] = useState([])
+  useEffect(() => {
+    fetch(SPACE_API)
+      .then((res) => {
+        console.log("Reg resp:", res);
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Parsed JSON data resp:", data);
+        setArticles(data.results);
+      })
+      .catch((err) => console.error("Error fetching news:", err));
+  }, []);
+   
+    return (
+        <Routes>
+          <Route path="/" element={<SpaceHome articles={articles} />} />
+        </Routes>
+    )
+};
 export default App
