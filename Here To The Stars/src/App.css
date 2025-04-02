@@ -13,6 +13,9 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
+.news-image {
+  max-width: 800px
+}
 
 .news-card {
   border: 1px solid #ddd;

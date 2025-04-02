@@ -5,6 +5,7 @@ const Card = (prop) => {
 
   return (
     <section>
+        <a href={prop.url}></a>
       <h2>{prop.heading}</h2>
       <img src={prop.img} alt={prop.alt}/>
       <p>{prop.text}</p>
