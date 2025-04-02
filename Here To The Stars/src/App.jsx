@@ -10,7 +10,7 @@ import fetchData from '../adapters/FetchData.js'
  const SpaceHome = ({ articles }) => {
   return (
     <div className="container">
-      <h1 className="title">Here To The Stars</h1>
+      <h1 className="title">Here To The Stars ⋆⁺₊⋆ ☾⋆⁺₊⋆</h1>
       <div className="grid">
         {articles.map((article) => (
           <Link to={article.url} target="_blank" className="news-card-link">

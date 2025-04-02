@@ -3,9 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-
 }
 
+.news-image {
+  max-width: 800px
+}
 
 .logo {
   height: 6em;
