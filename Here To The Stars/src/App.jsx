@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";  // Import useNavigate
 import "./App.css";
 
 const NEWS_API_URL = "https://saurav.tech/NewsAPI/top-headlines/category/general/us.json";
 
 const Home = ({ articles }) => {
+  const navigate = useNavigate(); 
+  
+
+  const handleGoBack = () => {
+    navigate("/");  
+  };
+
   return (
     <div className="app-container">
       <h1 className="app-title">Here to the Stars 🌎🚀</h1>
+    
+      <button onClick={handleGoBack} className="go-back-button">
+        Traverse Space
+      </button>
+      
       <div className="news-grid">
         {articles.map((article) => (
           <Link key={article.url} to={article.url} target="_blank" className="news-card-link">
@@ -35,11 +47,7 @@ const App = () => {
       .catch((err) => console.error("Error fetching news:", err));
   }, []);
 
-  return (
-    <Routes>
-      <Route path="/" element={<Home articles={articles} />} />
-    </Routes>
-  );
+  return <Home articles={articles} />;
 };
 
 export default App;

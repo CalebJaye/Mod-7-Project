@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom"; 
-import App from "./SpaceApp.jsx";  
+import SpaceApp from "./SpaceApp";  // Import SpaceApp
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <SpaceApp />  {/* This is the only Router in the app */}
   </BrowserRouter>
 );
