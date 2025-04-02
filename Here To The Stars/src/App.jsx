@@ -34,7 +34,7 @@ const App = () => {
       .then((data) => setArticles(data.articles))
       .catch((err) => console.error("Error fetching news:", err));
   }, []);
-
+  
   return(
     <Router>
       <Routes>
